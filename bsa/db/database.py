@@ -7,7 +7,7 @@ from bsa.config import Settings
 
 
 class OracleCursor:
-    """Thin adapter for Oracle binds and optional dictionary-shaped rows."""
+    
 
     def __init__(self, raw_cursor, dictionary: bool = False):
         self._cursor = raw_cursor
@@ -62,7 +62,7 @@ class OracleCursor:
 
 
 class OracleConnection:
-    """Connection facade allowing repositories to request dictionary cursors."""
+    
 
     def __init__(self, raw_connection):
         self._connection = raw_connection
@@ -75,7 +75,7 @@ class OracleConnection:
 
 
 class Database:
-    """Owns short-lived Oracle connections and transaction boundaries."""
+    
 
     def __init__(self, settings: Settings):
         self._settings = settings
